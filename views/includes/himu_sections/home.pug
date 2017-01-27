@@ -1,0 +1,35 @@
+block home
+	section#home
+		.home-pattern
+		#main-carousel.carousel.slide(data-ride="carousel")
+			ol.carousel-indicators
+				li(data-target="#main-carousel", data-slide-to="0", class="active")
+				li(data-target="#main-carousel", data-slide-to="1")
+				li(data-target="#main-carousel", data-slide-to="2")
+			<!--/.carousel-indicators--> 
+
+			.carousel-inner
+				.item.active(style={'background-image':'url(/public/himu/images/slider/slide3.jpg'})
+					.carousel-caption
+						div
+							h2.heading.animated.bounceInDown "'Himu' Onepage HTML Template"
+							p.animated.bounceInUp "Fully Professional one page template"
+							a.btn.btn-default.slider-btn.animated.fadeIn(href="#") "Get Started"
+
+				.item(style={'background-image':'url(/public/himu/images/slider/slide2.jpg'})
+					.carousel-caption
+						div
+							h2.heading.animated.bounceInDown "'Himu' Onepage HTML Template"
+							p.animated.bounceInUp "Fully Professional one page template"
+							a.btn.btn-default.slider-btn.animated.fadeIn(href="#") "Get Started"
+
+				.item(style={'background-image':'url(/public/himu/images/slider/slide1.jpg'})
+					.carousel-caption
+						div
+							h2.heading.animated.bounceInDown "'Himu' Onepage HTML Template"
+							p.animated.bounceInUp "Fully Professional one page template"
+							a.btn.btn-default.slider-btn.animated.fadeIn(href="#") "Get Started"
+			a(class="carousel-left member-carousel-control hidden-xs", href="#main-carousel", data-slide="prev")
+				i.fa.fa-angle-left
+			a(class="carousel-right member-carousel-control hidden-xs", href="#main-carousel", data-slide="prev")
+				i.fa.fa-angle-right

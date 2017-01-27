@@ -1,0 +1,92 @@
+doctype html
+head
+	title= 'Titolo pagina'
+body
+	- var classes= ['input-control', 'inline-checkbox', 'awesome'];
+	.block#block(
+		style = {'width' :'200px', 'height': '200px', 'background-color': 'red'}
+	)
+
+	- for(var x= 0; x < 3; x++)
+		input(
+			type = 'checkbox', 
+			checked, 
+			class = classes, 
+			style = {'color': 'red', 'background-color': 'pink'}, 
+			nameplace = 'Esempio di input'
+			value = '300'
+		)
+
+		p(
+			class='ciao'
+		)
+			='CIAO'
+
+			label.lol
+				='CIAONE'
+
+			='CIAONONE'
+
+		input(
+			type = 'checkbox', 
+			class = classes, 
+			style = {'color': 'red', 'background-color': 'pink'}, 
+			nameplace = 'Esempio di input'
+			value = '300'
+		)
+
+	each item in classes
+		li.classe= classes
+
+	- var i = 0;
+	- while(i++<10){
+		div(
+			'style' = {
+				'display': 'block',
+				'width': '100px',
+				'height': '100px',
+				'color': 'white',
+				'text-align': 'center',
+				'vertical-align': 'middle',
+				'align-items': 'center',
+				'font-weight': 'bold',
+				'background-color': 'blue',
+				'margin': '10px',
+				'float': 'left'
+			}
+		)
+			= i+'o'
+			p.block
+				= 'blocco'
+	- }
+	- i=0;
+
+	- do{
+		div(
+			'style' = {
+				'display': 'block',
+				'width': '100px',
+				'height': '100px',
+				'color': 'red',
+				'text-align': 'center',
+				'vertical-align': 'middle',
+				'align-items': 'center',
+				'font-weight': 'bold',
+				'background-color': 'yellow',
+				'margin': '10px',
+				'float': 'left'
+			}
+		).
+			'questo #[strong.strongest_class #{i}]'
+
+	- }while(++i<10);
+
+	p 
+		| If I don't write the paragraph with tag interpolation, tags like
+		strong strong
+		| and
+		em em
+		| might produce unexpected results.
+	
+	p.
+		If I do, whitespace is #[strong respected] and #[em everybody] is happy.

@@ -1,0 +1,19 @@
+- var menu_list = [{'id': 'navigation', 'title': "Home"}, {'id': 'about-us', 'title': "About Us"}, {'id': 'services', 'title': "Services"}, {'id': 'our-team', 'title': "Our Team"}, {'id': 'portfolio', 'title': "Portfolio"}, {'id': 'clients', 'title': "Clients"}, {'id': 'blog', 'title': "Blog"}, {'id': 'contact', 'title': "Contact"}];
+
+block menu
+	header#navigation
+		.navbar.navbar-inverse.navbar-fixed-top(role='banner')
+			.container
+				.navbar-header
+					button(type="button", class="navbar-toggle", data-toggle="collapse", data-target="collapse")
+						span.sr-only "Toggle navigation" span.icon-bar '' span.icon-bar '' span.icon-bar ''
+					a.navbar-brand(href="index.html")
+						h1: img(src="/public/himu/images/logo.png", alt="logo")
+				.collapse.navbar-collapse
+					ul(class="nav navbar-nav navbar-right")
+						each element_list, index in menu_list
+							li.scroll(class=(index==0)?'active':'')
+								a(
+									href='#'+element_list.id
+								) #{element_list.title}
+	<!--/#navigation-->
